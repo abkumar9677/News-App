@@ -10,9 +10,15 @@ body {
 
 .title{
   text-align: right;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 600;
 }
+/* div.len{
+  height: 100px;
+  box-shadow: 2px 3px 10px 10px rgba(175, 168, 168, 0.466);
+  background-color: rgba(221, 212, 212, 0.082);
+} */
+/* header*/
 .btn{
   color: antiquewhite;
   background: black;
@@ -22,8 +28,12 @@ body {
 .head{
   padding:5px;
   height:40px;
-  background-color:#ffffff;
+  background-color:#fdfdfd;
 }
+/* .remove{
+  align-content: right;
+} */
+/* FEED */
 
 .card {
   width: 700px;
@@ -96,4 +106,21 @@ img {
 }
 h4{
   text-align: center;
+}
+.filter{
+  width: 300px;
+}
+.container{
+  height: 110% ;
+    display:flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+    padding:20px 0px 0px 230px;
+}
+.news-pannel{
+    flex: 50%;
+    margin-left: 25px;
+}
+.panels{
+  text-align: right;
 }

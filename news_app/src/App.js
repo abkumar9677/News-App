@@ -39,9 +39,17 @@ export default class Newsapp extends React.Component {
     // }else{
       return (
         <>
-        <Header/>
-        <Filter />
-        <News/>
+         <Header/>
+        
+              <div className='container'>
+                <div>
+                  <Filter/>
+                </div>
+                <div className='news-pannel'>
+                  <News/>
+                </div>
+              </div>
+            
 
         </>
       )

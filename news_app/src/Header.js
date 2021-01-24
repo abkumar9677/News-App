@@ -7,8 +7,8 @@ export default function Header(){
   
     return(
       <>
-        <div className="head" style={{height:'40px',backgroundColor:'#e3dbdb'}}>
-        <button className="btn" style={{backgroundColor:'#000',color:'white',padding:'10px',borderRadius:'3px'}} onClick={refreshPage}>
+        <div className="head">
+        <button className="btn" style={{backgroundColor:'#000',color:'white',padding:'10px',borderRadius:'3px',marginLeft:'225px'}} onClick={refreshPage}>
           Show Latest News
         </button>
         </div>
