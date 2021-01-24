@@ -20,6 +20,9 @@ render(){
                 <p className='reset' onClick={this.reset}>Reset</p>
             </div>
             <hr/>
+
+            {/*Selection list of Languages*/}
+
             <div>
                 <label>language</label>
                 <select id='lang' defaultValue='' name='language'>
@@ -39,6 +42,11 @@ render(){
                     <option value="ru">Russian</option>
                     <option value="es">Spanish</option>
                 </select>
+
+
+                {/*Selection list of country*/}
+
+
                 <label>country</label>
                 <select id='con' defaultValue='' name='country'>
                     <option value="">Select</option>    

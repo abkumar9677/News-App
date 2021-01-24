@@ -18,7 +18,7 @@ export default class Newsapp extends React.Component {
     fetch('https://api.currentsapi.services/v1/latest-news?apiKey=GEMQB7YirpP3ZCtynSyNRQzyT2ZaNooOnVcLAqSESiFX5RoH')
       .then(response => response.json())
       .then(data => {
-        // console.log(data)
+        // console.log(data) ---> used for checking fetched data
         this.setState({
           news: data.news
         });
@@ -28,15 +28,11 @@ export default class Newsapp extends React.Component {
           isLaoded:true           // setting loading component
         })
       )
-      .catch(err=> console.log(err))
+      // .catch(err=> console.log(err)) ----> used for checking errors while fetching data
   }
 
   render() {
-    // console.log(this.state)
-    // var {isLaoded}=this.state;
-    // if(!isLaoded){
-    //   return(<h4>Loading....</h4>)
-    // }else{
+    
       return (
         <>
          <Header/>

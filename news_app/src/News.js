@@ -26,17 +26,20 @@ export default class News extends React.Component {
           isLaoded:true           // setting loading component
         })
       )
-      .catch(err=> console.log(err))
+    //   .catch(err=> console.log(err))
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     var {isLaoded}=this.state;
     if(!isLaoded){
       return(<h4>Loading....</h4>)
     }else{
       return (
         <>
+        
+        {/*Mapping News panels to the window */}
+
           {this.state.news.map((newsPanel,index)=>{
             return (
               <div key={newsPanel.id} className="card">         {/* news panel  */}
