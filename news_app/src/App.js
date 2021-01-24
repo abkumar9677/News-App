@@ -2,7 +2,9 @@
 import React from 'react';
 import './index.css';
 import Header from './Header';
-export default class News extends React.Component {
+import News from './News';
+import Filter from './Filter';
+export default class Newsapp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,50 +32,18 @@ export default class News extends React.Component {
   }
 
   render() {
-    console.log(this.state)
-    var {isLaoded}=this.state;
-    if(!isLaoded){
-      return(<h4>Loading....</h4>)
-    }else{
+    // console.log(this.state)
+    // var {isLaoded}=this.state;
+    // if(!isLaoded){
+    //   return(<h4>Loading....</h4>)
+    // }else{
       return (
         <>
         <Header/>
-          {this.state.news.map((newsPanel,index)=>{
-            return (
-              <div key={newsPanel.id} className="card">         {/* news panel  */}
-                    <div className="news-title">                                     
-                        <p> {newsPanel.title} </p>                                   {/* News title*/}
-                        <p className="cross">&times;</p>        {/* Close symbol*/} 
-                    </div>
-
-                    <div className="auth-date">           {/* Author & date published */}
-                        <span className="auth"> {newsPanel.author.toUpperCase()} </span>
-                        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span className="auth">{newsPanel.published.slice(0 , 19)}</span>
-                    </div>
-
-                    <div className="image">                             {/* News Image*/}
-                     <div className="news-image">
-                            <img src={newsPanel.image} alt="" />
-                        </div>
-                        <div className="right">
-                            <p className="desc">{newsPanel.description} </p>     {/* News Description*/}
-                            <p className="links">
-                                <span className="refer">Referrence</span>
-                                <br/>
-                                <a href={newsPanel.url}>{newsPanel.url} </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            )
-          })}
+        <Filter />
+        <News/>
 
         </>
       )
     }
   }
-}
